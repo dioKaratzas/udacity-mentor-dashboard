@@ -1,0 +1,838 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29FCC46CFDF62DE94AC7EDA0 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FCC574B1F0F77150A51121 /* Project.swift */; };
+		477AA5F7BBD6787C7A758FA6 /* Pods_UdacityMentorDashboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2185D8501979446F7E6706A3 /* Pods_UdacityMentorDashboardUITests.framework */; };
+		A7A4CF5CD57A1E7F55152B0D /* Pods_UdacityMentorDashboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9315C29C8B86DC254378E6 /* Pods_UdacityMentorDashboard.framework */; };
+		C31421BA20E2A54F00C622FF /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31421B920E2A54F00C622FF /* DocumentView.swift */; };
+		C31C379B20E403D400A0FCD2 /* ToolbarItemConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31C379A20E403D400A0FCD2 /* ToolbarItemConfiguration.swift */; };
+		C34AE67020F3E4C700F9167E /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AE66F20F3E4C700F9167E /* TokenViewController.swift */; };
+		C366655C20D717D600D7109E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C366655B20D717D600D7109E /* .gitignore */; };
+		C37E430420D409DF00537CD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E430320D409DF00537CD9 /* AppDelegate.swift */; };
+		C37E430820D409DF00537CD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37E430720D409DF00537CD9 /* Assets.xcassets */; };
+		C37E430B20D409DF00537CD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37E430920D409DF00537CD9 /* Main.storyboard */; };
+		C37E431720D409DF00537CD9 /* UdacityMentorDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E431620D409DF00537CD9 /* UdacityMentorDashboardTests.swift */; };
+		C37E432220D409DF00537CD9 /* UdacityMentorDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E432120D409DF00537CD9 /* UdacityMentorDashboardUITests.swift */; };
+		C37E433420D4150300537CD9 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E433320D4150300537CD9 /* WindowController.swift */; };
+		C390614620DBF1DB0004BD47 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390614520DBF1DB0004BD47 /* TableViewController.swift */; };
+		C392846820D6B3E3004272DC /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392846720D6B3E3004272DC /* ApiRouter.swift */; };
+		C392846B20D6B6A8004272DC /* Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392846A20D6B6A8004272DC /* Submission.swift */; };
+		C392846D20D6BC62004272DC /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392846C20D6BC62004272DC /* ApiClient.swift */; };
+		C392847120D6BD11004272DC /* DataRequest+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392846F20D6BD11004272DC /* DataRequest+Decodable.swift */; };
+		C392847220D6BD11004272DC /* AlamofireDecodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392847020D6BD11004272DC /* AlamofireDecodableError.swift */; };
+		C3A9AB1020E65319001CFB53 /* AdaptiveSpaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9AB0F20E65319001CFB53 /* AdaptiveSpaceItem.swift */; };
+		C3B3AB9020DD38CB00121561 /* PeerFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B3AB8F20DD38CB00121561 /* PeerFeedback.swift */; };
+		C3B3AB9220DD397B00121561 /* StudentFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B3AB9120DD397B00121561 /* StudentFeedback.swift */; };
+		C3B6C4F420E0F5D5000B26B9 /* StarRatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B6C4F320E0F5D5000B26B9 /* StarRatingControl.swift */; };
+		C3D083BD20D674ED00D9D901 /* UdacityApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D083BC20D674ED00D9D901 /* UdacityApi.swift */; };
+		C3EAA40E20E1071E00EF3EDA /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EAA40D20E1071E00EF3EDA /* StarView.swift */; };
+		C3EFFC3F20F3EFBC00A91F22 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EFFC3E20F3EFBC00A91F22 /* Misc.swift */; };
+		C3FAD0F820DA874000F65410 /* SwiftExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FAD0F720DA874000F65410 /* SwiftExtensions.swift */; };
+		E1998D3169CC0E21022DC87F /* Pods_UdacityMentorDashboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6857699D1CC8577A5900F468 /* Pods_UdacityMentorDashboardTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C37E431320D409DF00537CD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C37E42F820D409DE00537CD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C37E42FF20D409DF00537CD9;
+			remoteInfo = UdacityMentorDashboard;
+		};
+		C37E431E20D409DF00537CD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C37E42F820D409DE00537CD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C37E42FF20D409DF00537CD9;
+			remoteInfo = UdacityMentorDashboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EB47C6AB193B6FD6F765924 /* Pods-UdacityMentorDashboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdacityMentorDashboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UdacityMentorDashboard/Pods-UdacityMentorDashboard.debug.xcconfig"; sourceTree = "<group>"; };
+		2185D8501979446F7E6706A3 /* Pods_UdacityMentorDashboardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UdacityMentorDashboardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29FCC574B1F0F77150A51121 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		6857699D1CC8577A5900F468 /* Pods_UdacityMentorDashboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UdacityMentorDashboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		736FEF3A6B6BC5840E81238B /* Pods-UdacityMentorDashboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdacityMentorDashboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-UdacityMentorDashboard/Pods-UdacityMentorDashboard.release.xcconfig"; sourceTree = "<group>"; };
+		74534746277DBC9971256D15 /* Pods-UdacityMentorDashboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdacityMentorDashboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UdacityMentorDashboardUITests/Pods-UdacityMentorDashboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2A9F0E69C3917017BF1990E /* Pods-UdacityMentorDashboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdacityMentorDashboardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UdacityMentorDashboardTests/Pods-UdacityMentorDashboardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C31421B920E2A54F00C622FF /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		C31C379A20E403D400A0FCD2 /* ToolbarItemConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemConfiguration.swift; sourceTree = "<group>"; };
+		C34AE66F20F3E4C700F9167E /* TokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
+		C366655B20D717D600D7109E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C37E430020D409DF00537CD9 /* Mentor Dashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mentor Dashboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37E430320D409DF00537CD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C37E430720D409DF00537CD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C37E430A20D409DF00537CD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C37E430C20D409DF00537CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37E430D20D409DF00537CD9 /* UdacityMentorDashboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UdacityMentorDashboard.entitlements; sourceTree = "<group>"; };
+		C37E431220D409DF00537CD9 /* UdacityMentorDashboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UdacityMentorDashboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37E431620D409DF00537CD9 /* UdacityMentorDashboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityMentorDashboardTests.swift; sourceTree = "<group>"; };
+		C37E431820D409DF00537CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37E431D20D409DF00537CD9 /* UdacityMentorDashboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UdacityMentorDashboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37E432120D409DF00537CD9 /* UdacityMentorDashboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityMentorDashboardUITests.swift; sourceTree = "<group>"; };
+		C37E432320D409DF00537CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37E433320D4150300537CD9 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		C390614520DBF1DB0004BD47 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C392846720D6B3E3004272DC /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		C392846A20D6B6A8004272DC /* Submission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submission.swift; sourceTree = "<group>"; };
+		C392846C20D6BC62004272DC /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		C392846F20D6BD11004272DC /* DataRequest+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataRequest+Decodable.swift"; sourceTree = "<group>"; };
+		C392847020D6BD11004272DC /* AlamofireDecodableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireDecodableError.swift; sourceTree = "<group>"; };
+		C3A9AB0F20E65319001CFB53 /* AdaptiveSpaceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveSpaceItem.swift; sourceTree = "<group>"; };
+		C3B3AB8F20DD38CB00121561 /* PeerFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerFeedback.swift; sourceTree = "<group>"; };
+		C3B3AB9120DD397B00121561 /* StudentFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFeedback.swift; sourceTree = "<group>"; };
+		C3B6C4F320E0F5D5000B26B9 /* StarRatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingControl.swift; sourceTree = "<group>"; };
+		C3D083BC20D674ED00D9D901 /* UdacityApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityApi.swift; sourceTree = "<group>"; };
+		C3EAA40D20E1071E00EF3EDA /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		C3EFFC3E20F3EFBC00A91F22 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		C3FAD0F720DA874000F65410 /* SwiftExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExtensions.swift; sourceTree = "<group>"; };
+		C40E9FB7CC8DEB7C60191B20 /* Pods-UdacityMentorDashboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdacityMentorDashboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UdacityMentorDashboardUITests/Pods-UdacityMentorDashboardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CCE897E567706194D093E683 /* Pods-UdacityMentorDashboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UdacityMentorDashboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UdacityMentorDashboardTests/Pods-UdacityMentorDashboardTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED9315C29C8B86DC254378E6 /* Pods_UdacityMentorDashboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UdacityMentorDashboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C37E42FD20D409DF00537CD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7A4CF5CD57A1E7F55152B0D /* Pods_UdacityMentorDashboard.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37E430F20D409DF00537CD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1998D3169CC0E21022DC87F /* Pods_UdacityMentorDashboardTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37E431A20D409DF00537CD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				477AA5F7BBD6787C7A758FA6 /* Pods_UdacityMentorDashboardUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C6F5CF44D3BFAF9884710B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EB47C6AB193B6FD6F765924 /* Pods-UdacityMentorDashboard.debug.xcconfig */,
+				736FEF3A6B6BC5840E81238B /* Pods-UdacityMentorDashboard.release.xcconfig */,
+				C2A9F0E69C3917017BF1990E /* Pods-UdacityMentorDashboardTests.debug.xcconfig */,
+				CCE897E567706194D093E683 /* Pods-UdacityMentorDashboardTests.release.xcconfig */,
+				74534746277DBC9971256D15 /* Pods-UdacityMentorDashboardUITests.debug.xcconfig */,
+				C40E9FB7CC8DEB7C60191B20 /* Pods-UdacityMentorDashboardUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C37E42F720D409DE00537CD9 = {
+			isa = PBXGroup;
+			children = (
+				C366655B20D717D600D7109E /* .gitignore */,
+				C37E430220D409DF00537CD9 /* UdacityMentorDashboard */,
+				C37E431520D409DF00537CD9 /* UdacityMentorDashboardTests */,
+				C37E432020D409DF00537CD9 /* UdacityMentorDashboardUITests */,
+				C37E430120D409DF00537CD9 /* Products */,
+				9C6F5CF44D3BFAF9884710B3 /* Pods */,
+				D45EA8B6F532AC9C9D77EAFC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C37E430120D409DF00537CD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C37E430020D409DF00537CD9 /* Mentor Dashboard.app */,
+				C37E431220D409DF00537CD9 /* UdacityMentorDashboardTests.xctest */,
+				C37E431D20D409DF00537CD9 /* UdacityMentorDashboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C37E430220D409DF00537CD9 /* UdacityMentorDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				C392846920D6B69A004272DC /* Models */,
+				C3D083BB20D674CD00D9D901 /* Api */,
+				C37E433220D414EC00537CD9 /* Controllers */,
+				C37E432F20D40D1B00537CD9 /* Libs */,
+				C37E430320D409DF00537CD9 /* AppDelegate.swift */,
+				C37E430720D409DF00537CD9 /* Assets.xcassets */,
+				C37E430920D409DF00537CD9 /* Main.storyboard */,
+				C37E430C20D409DF00537CD9 /* Info.plist */,
+				C37E430D20D409DF00537CD9 /* UdacityMentorDashboard.entitlements */,
+			);
+			path = UdacityMentorDashboard;
+			sourceTree = "<group>";
+		};
+		C37E431520D409DF00537CD9 /* UdacityMentorDashboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				C37E431620D409DF00537CD9 /* UdacityMentorDashboardTests.swift */,
+				C37E431820D409DF00537CD9 /* Info.plist */,
+			);
+			path = UdacityMentorDashboardTests;
+			sourceTree = "<group>";
+		};
+		C37E432020D409DF00537CD9 /* UdacityMentorDashboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C37E432120D409DF00537CD9 /* UdacityMentorDashboardUITests.swift */,
+				C37E432320D409DF00537CD9 /* Info.plist */,
+			);
+			path = UdacityMentorDashboardUITests;
+			sourceTree = "<group>";
+		};
+		C37E432F20D40D1B00537CD9 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				C3A9AB0F20E65319001CFB53 /* AdaptiveSpaceItem.swift */,
+				C3EAA40C20E1070900EF3EDA /* StarRating */,
+				C392846E20D6BCFE004272DC /* CodableAlamofire */,
+				C3FAD0F720DA874000F65410 /* SwiftExtensions.swift */,
+				C31421B920E2A54F00C622FF /* DocumentView.swift */,
+				C31C379A20E403D400A0FCD2 /* ToolbarItemConfiguration.swift */,
+				C3EFFC3E20F3EFBC00A91F22 /* Misc.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		C37E433220D414EC00537CD9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C37E433320D4150300537CD9 /* WindowController.swift */,
+				C390614520DBF1DB0004BD47 /* TableViewController.swift */,
+				C34AE66F20F3E4C700F9167E /* TokenViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C392846920D6B69A004272DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C392846A20D6B6A8004272DC /* Submission.swift */,
+				29FCC574B1F0F77150A51121 /* Project.swift */,
+				C3B3AB8F20DD38CB00121561 /* PeerFeedback.swift */,
+				C3B3AB9120DD397B00121561 /* StudentFeedback.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C392846E20D6BCFE004272DC /* CodableAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				C392847020D6BD11004272DC /* AlamofireDecodableError.swift */,
+				C392846F20D6BD11004272DC /* DataRequest+Decodable.swift */,
+			);
+			path = CodableAlamofire;
+			sourceTree = "<group>";
+		};
+		C3D083BB20D674CD00D9D901 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				C3D083BC20D674ED00D9D901 /* UdacityApi.swift */,
+				C392846720D6B3E3004272DC /* ApiRouter.swift */,
+				C392846C20D6BC62004272DC /* ApiClient.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		C3EAA40C20E1070900EF3EDA /* StarRating */ = {
+			isa = PBXGroup;
+			children = (
+				C3B6C4F320E0F5D5000B26B9 /* StarRatingControl.swift */,
+				C3EAA40D20E1071E00EF3EDA /* StarView.swift */,
+			);
+			path = StarRating;
+			sourceTree = "<group>";
+		};
+		D45EA8B6F532AC9C9D77EAFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED9315C29C8B86DC254378E6 /* Pods_UdacityMentorDashboard.framework */,
+				6857699D1CC8577A5900F468 /* Pods_UdacityMentorDashboardTests.framework */,
+				2185D8501979446F7E6706A3 /* Pods_UdacityMentorDashboardUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C37E42FF20D409DF00537CD9 /* UdacityMentorDashboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37E432620D409DF00537CD9 /* Build configuration list for PBXNativeTarget "UdacityMentorDashboard" */;
+			buildPhases = (
+				2725D4F2A5A213BEBCCA55D2 /* [CP] Check Pods Manifest.lock */,
+				C37E42FC20D409DF00537CD9 /* Sources */,
+				C37E42FD20D409DF00537CD9 /* Frameworks */,
+				C37E42FE20D409DF00537CD9 /* Resources */,
+				F8C2D91D2FD60FB89CAC07A2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UdacityMentorDashboard;
+			productName = UdacityMentorDashboard;
+			productReference = C37E430020D409DF00537CD9 /* Mentor Dashboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C37E431120D409DF00537CD9 /* UdacityMentorDashboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37E432920D409DF00537CD9 /* Build configuration list for PBXNativeTarget "UdacityMentorDashboardTests" */;
+			buildPhases = (
+				1E2350C4C9E74AF18C04E8F7 /* [CP] Check Pods Manifest.lock */,
+				C37E430E20D409DF00537CD9 /* Sources */,
+				C37E430F20D409DF00537CD9 /* Frameworks */,
+				C37E431020D409DF00537CD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C37E431420D409DF00537CD9 /* PBXTargetDependency */,
+			);
+			name = UdacityMentorDashboardTests;
+			productName = UdacityMentorDashboardTests;
+			productReference = C37E431220D409DF00537CD9 /* UdacityMentorDashboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C37E431C20D409DF00537CD9 /* UdacityMentorDashboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C37E432C20D409DF00537CD9 /* Build configuration list for PBXNativeTarget "UdacityMentorDashboardUITests" */;
+			buildPhases = (
+				8C7AE90238DEC0A697B6DB22 /* [CP] Check Pods Manifest.lock */,
+				C37E431920D409DF00537CD9 /* Sources */,
+				C37E431A20D409DF00537CD9 /* Frameworks */,
+				C37E431B20D409DF00537CD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C37E431F20D409DF00537CD9 /* PBXTargetDependency */,
+			);
+			name = UdacityMentorDashboardUITests;
+			productName = UdacityMentorDashboardUITests;
+			productReference = C37E431D20D409DF00537CD9 /* UdacityMentorDashboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C37E42F820D409DE00537CD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Dionisios Karatzas";
+				TargetAttributes = {
+					C37E42FF20D409DF00537CD9 = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					C37E431120D409DF00537CD9 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = C37E42FF20D409DF00537CD9;
+					};
+					C37E431C20D409DF00537CD9 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = C37E42FF20D409DF00537CD9;
+					};
+				};
+			};
+			buildConfigurationList = C37E42FB20D409DE00537CD9 /* Build configuration list for PBXProject "UdacityMentorDashboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C37E42F720D409DE00537CD9;
+			productRefGroup = C37E430120D409DF00537CD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C37E42FF20D409DF00537CD9 /* UdacityMentorDashboard */,
+				C37E431120D409DF00537CD9 /* UdacityMentorDashboardTests */,
+				C37E431C20D409DF00537CD9 /* UdacityMentorDashboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C37E42FE20D409DF00537CD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37E430820D409DF00537CD9 /* Assets.xcassets in Resources */,
+				C366655C20D717D600D7109E /* .gitignore in Resources */,
+				C37E430B20D409DF00537CD9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37E431020D409DF00537CD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37E431B20D409DF00537CD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E2350C4C9E74AF18C04E8F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UdacityMentorDashboardTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2725D4F2A5A213BEBCCA55D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UdacityMentorDashboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C7AE90238DEC0A697B6DB22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UdacityMentorDashboardUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8C2D91D2FD60FB89CAC07A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UdacityMentorDashboard/Pods-UdacityMentorDashboard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UdacityMentorDashboard/Pods-UdacityMentorDashboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C37E42FC20D409DF00537CD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A9AB1020E65319001CFB53 /* AdaptiveSpaceItem.swift in Sources */,
+				C3FAD0F820DA874000F65410 /* SwiftExtensions.swift in Sources */,
+				C392846820D6B3E3004272DC /* ApiRouter.swift in Sources */,
+				C3B3AB9220DD397B00121561 /* StudentFeedback.swift in Sources */,
+				C390614620DBF1DB0004BD47 /* TableViewController.swift in Sources */,
+				C3B6C4F420E0F5D5000B26B9 /* StarRatingControl.swift in Sources */,
+				C3EAA40E20E1071E00EF3EDA /* StarView.swift in Sources */,
+				C392846D20D6BC62004272DC /* ApiClient.swift in Sources */,
+				C31421BA20E2A54F00C622FF /* DocumentView.swift in Sources */,
+				C34AE67020F3E4C700F9167E /* TokenViewController.swift in Sources */,
+				C37E433420D4150300537CD9 /* WindowController.swift in Sources */,
+				C392847220D6BD11004272DC /* AlamofireDecodableError.swift in Sources */,
+				C392846B20D6B6A8004272DC /* Submission.swift in Sources */,
+				C3EFFC3F20F3EFBC00A91F22 /* Misc.swift in Sources */,
+				C37E430420D409DF00537CD9 /* AppDelegate.swift in Sources */,
+				C3D083BD20D674ED00D9D901 /* UdacityApi.swift in Sources */,
+				29FCC46CFDF62DE94AC7EDA0 /* Project.swift in Sources */,
+				C3B3AB9020DD38CB00121561 /* PeerFeedback.swift in Sources */,
+				C31C379B20E403D400A0FCD2 /* ToolbarItemConfiguration.swift in Sources */,
+				C392847120D6BD11004272DC /* DataRequest+Decodable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37E430E20D409DF00537CD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37E431720D409DF00537CD9 /* UdacityMentorDashboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C37E431920D409DF00537CD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37E432220D409DF00537CD9 /* UdacityMentorDashboardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C37E431420D409DF00537CD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C37E42FF20D409DF00537CD9 /* UdacityMentorDashboard */;
+			targetProxy = C37E431320D409DF00537CD9 /* PBXContainerItemProxy */;
+		};
+		C37E431F20D409DF00537CD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C37E42FF20D409DF00537CD9 /* UdacityMentorDashboard */;
+			targetProxy = C37E431E20D409DF00537CD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C37E430920D409DF00537CD9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C37E430A20D409DF00537CD9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C37E432420D409DF00537CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C37E432520D409DF00537CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C37E432720D409DF00537CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EB47C6AB193B6FD6F765924 /* Pods-UdacityMentorDashboard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = UdacityMentorDashboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboard;
+				PRODUCT_NAME = "Mentor Dashboard";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C37E432820D409DF00537CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 736FEF3A6B6BC5840E81238B /* Pods-UdacityMentorDashboard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = UdacityMentorDashboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboard;
+				PRODUCT_NAME = "Mentor Dashboard";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C37E432A20D409DF00537CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2A9F0E69C3917017BF1990E /* Pods-UdacityMentorDashboardTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UdacityMentorDashboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UdacityMentorDashboard.app/Contents/MacOS/UdacityMentorDashboard";
+			};
+			name = Debug;
+		};
+		C37E432B20D409DF00537CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE897E567706194D093E683 /* Pods-UdacityMentorDashboardTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UdacityMentorDashboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UdacityMentorDashboard.app/Contents/MacOS/UdacityMentorDashboard";
+			};
+			name = Release;
+		};
+		C37E432D20D409DF00537CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74534746277DBC9971256D15 /* Pods-UdacityMentorDashboardUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UdacityMentorDashboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = UdacityMentorDashboard;
+			};
+			name = Debug;
+		};
+		C37E432E20D409DF00537CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C40E9FB7CC8DEB7C60191B20 /* Pods-UdacityMentorDashboardUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UdacityMentorDashboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = UdacityMentorDashboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C37E42FB20D409DE00537CD9 /* Build configuration list for PBXProject "UdacityMentorDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37E432420D409DF00537CD9 /* Debug */,
+				C37E432520D409DF00537CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37E432620D409DF00537CD9 /* Build configuration list for PBXNativeTarget "UdacityMentorDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37E432720D409DF00537CD9 /* Debug */,
+				C37E432820D409DF00537CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37E432920D409DF00537CD9 /* Build configuration list for PBXNativeTarget "UdacityMentorDashboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37E432A20D409DF00537CD9 /* Debug */,
+				C37E432B20D409DF00537CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C37E432C20D409DF00537CD9 /* Build configuration list for PBXNativeTarget "UdacityMentorDashboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C37E432D20D409DF00537CD9 /* Debug */,
+				C37E432E20D409DF00537CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C37E42F820D409DE00537CD9 /* Project object */;
+}
