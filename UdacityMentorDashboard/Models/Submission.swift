@@ -100,6 +100,13 @@ final class Submission: NSObject, Codable {
 
         return String(format: "$ %.02f", value)
     }
+    
+    @objc dynamic var priceD: Double {
+        guard let value = Double(_price!) else {
+            return 0;
+        }
+        return value;
+    }
 
     @objc dynamic var completedAt: String {
         if let value = _completedAt, let date = Date.getFormattedDate(string: value, formatterGet: "yyyy-MM-dd'T'HH:mm:ss.zzzZ", formatterPrint: "MM/dd/yyyy") {

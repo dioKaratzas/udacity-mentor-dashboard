@@ -41,7 +41,7 @@ extension String {
         let result = NSMutableAttributedString(string: self)
 
 
-        result.addAttributes([NSAttributedStringKey.foregroundColor: color], range: range)
+        result.addAttributes([NSAttributedString.Key.foregroundColor: color], range: range)
 
 
         return result

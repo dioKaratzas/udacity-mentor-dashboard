@@ -341,6 +341,7 @@
 				TargetAttributes = {
 					C37E42FF20D409DF00537CD9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -349,10 +350,12 @@
 					};
 					C37E431120D409DF00537CD9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = C37E42FF20D409DF00537CD9;
 					};
 					C37E431C20D409DF00537CD9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = C37E42FF20D409DF00537CD9;
 					};
 				};
@@ -685,7 +688,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboard;
 				PRODUCT_NAME = "Mentor Dashboard";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -707,7 +710,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboard;
 				PRODUCT_NAME = "Mentor Dashboard";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -727,8 +730,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UdacityMentorDashboard.app/Contents/MacOS/UdacityMentorDashboard";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mentor Dashboard.app/Contents/MacOS/Mentor Dashboard";
 			};
 			name = Debug;
 		};
@@ -748,8 +751,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UdacityMentorDashboard.app/Contents/MacOS/UdacityMentorDashboard";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mentor Dashboard.app/Contents/MacOS/Mentor Dashboard";
 			};
 			name = Release;
 		};
@@ -768,7 +771,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboardUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = UdacityMentorDashboard;
 			};
 			name = Debug;
@@ -788,7 +791,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.dkaratzas.UdacityMentorDashboardUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = UdacityMentorDashboard;
 			};
 			name = Release;

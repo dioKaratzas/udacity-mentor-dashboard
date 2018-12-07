@@ -37,12 +37,16 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
     private var currentSelectedIndex = 0
 
     var toolbar: NSToolbar!
+    var toolbarTotalTv : NSTextField = NSTextField(frame: NSRect(x: 0, y: 0, width: 200, height: 17))
+    
 
     let toolbarItems: [ToolbarItemConfiguration] = [
         ToolbarItemConfiguration(title: "", iconName: nil, identifier: NSToolbarItem.Identifier(rawValue: "TinySpace")),
-        ToolbarItemConfiguration(title: "", iconName: NSImage.Name("Logo"), identifier: NSToolbarItem.Identifier(rawValue: "Logo")),
+        ToolbarItemConfiguration(title: "", iconName: "Logo", identifier: NSToolbarItem.Identifier(rawValue: "Logo")),
         ToolbarItemConfiguration(title: "", iconName: nil, identifier: NSToolbarItem.Identifier(rawValue: "AdaptiveSpace")),
-        ToolbarItemConfiguration(title: "", iconName: nil, identifier: NSToolbarItem.Identifier(rawValue: "SubmissionSwitch"))
+        ToolbarItemConfiguration(title: "", iconName: nil, identifier: NSToolbarItem.Identifier(rawValue: "SubmissionSwitch")),
+        ToolbarItemConfiguration(title: "", iconName: nil, identifier: NSToolbarItem.Identifier(rawValue: "TinySpace")),
+        ToolbarItemConfiguration(title: "", iconName: nil, identifier: NSToolbarItem.Identifier(rawValue: "SubmissionsTotal")),
     ]
 
     var toolbarTabsIdentifiers: [NSToolbarItem.Identifier] {
@@ -68,7 +72,7 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
         super.viewWillAppear()
 
         if let window = NSApplication.shared.mainWindow {
-            toolbar = NSToolbar(identifier: NSToolbar.Identifier(rawValue: "TheToolbarIdentifier"))
+            toolbar = NSToolbar(identifier: "TheToolbarIdentifier")
             toolbar.allowsUserCustomization = true
             toolbar.delegate = self
 
@@ -82,7 +86,7 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
         }
     }
 
-    override func controlTextDidChange(_ notification: Notification) {
+    func controlTextDidChange(_ notification: Notification) {
         if notification.object as? NSSearchField == searchField {
             let searchString = self.searchField.stringValue
             if searchString.isEmpty {
@@ -136,7 +140,7 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
             let token = try keychain.getString("udacity-token")
 
             if token == nil {
-                self.performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "showTokenController"), sender: self)
+                self.performSegue(withIdentifier: "showTokenController", sender: self)
             } else {
                 UdacityApi.Token = token!
                 onTokenValid()
@@ -210,6 +214,13 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
                 self.tableView.reloadData()
                 self.splitView.isHidden = false
                 self.noDataLabel.isHidden = true
+                
+                var total = 0.0
+                for row in 0..<submissionsResult.count {
+                    total += submissionsResult[row].priceD 
+                }
+                
+                self.toolbarTotalTv.stringValue = "Total: \(total)"
             } else if error != nil {
                 Misc.dialogOKCancel(question: error!.localizedDescription, text: "")
             } else {
@@ -306,7 +317,7 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
     }
 
     @IBAction func onSetToken(_ sender: Any) {
-        self.performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "showTokenController"), sender: self)
+        self.performSegue(withIdentifier: "showTokenController", sender: self)
     }
 
 }
@@ -408,7 +419,6 @@ extension TableViewController: NSTableViewDelegate {
 }
 
 extension TableViewController: NSToolbarDelegate {
-
     func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
 
         guard let toolbarItemConfig: ToolbarItemConfiguration = toolbarItems.filter({ $0.identifier.rawValue == itemIdentifier.rawValue }).first
@@ -445,6 +455,15 @@ extension TableViewController: NSToolbarDelegate {
             let spaceView = NSImageView(frame: NSRect(x: 0, y: 0, width: 5, height: 1))
 
             toolbarItem.view = spaceView
+        } else if itemIdentifier.rawValue == "SubmissionsTotal"{
+            toolbarTotalTv.font = NSFont(name: toolbarTotalTv.font!.fontName, size: 18)
+            toolbarTotalTv.textColor = NSColor.darkGray
+            toolbarTotalTv.usesSingleLineMode = true
+            toolbarTotalTv.isEditable = false
+            toolbarTotalTv.isBordered = false
+            toolbarTotalTv.backgroundColor = NSColor.clear
+            toolbarTotalTv.stringValue = "Total: "
+            toolbarItem.view = toolbarTotalTv
         }
 
         return toolbarItem
