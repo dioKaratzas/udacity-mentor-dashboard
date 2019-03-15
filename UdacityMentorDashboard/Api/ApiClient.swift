@@ -57,9 +57,19 @@ class APIClient {
     static func studentFeedback(submissionId: String, completion: @escaping ([StudentFeedback]?, Error?) -> Void) {
         request(apiRouter: ApiRouter.StudentFeedback(id: submissionId), completion: completion)
     }
+    
+    static private func cancelAllRequests(){
+        Alamofire.SessionManager.default.session.getTasksWithCompletionHandler { (sessionDataTask, uploadData, downloadData) in
+            sessionDataTask.forEach { $0.cancel() }
+            uploadData.forEach { $0.cancel() }
+            downloadData.forEach { $0.cancel() }
+        }
+    }
 
 
     private static func request<T: Decodable>(apiRouter: ApiRouter, completion: @escaping (T?, Error?) -> Void) {
+        cancelAllRequests()
+        
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
 

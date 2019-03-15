@@ -107,7 +107,8 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
     }
 
     func onTokenValid() {
-        loadSubmissionsCompleted()
+//        loadSubmissionsCompleted()
+        loadSubmissionsAssigned()
     }
 
     //MARK: - Private methods
@@ -151,7 +152,6 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
     }
 
     private func fetchPeerFeedback(submissionId: String) {
-        self.peerFeedbackLabel.textColor = NSColor.black
         self.peerFeedbackLabel.stringValue = "This submission has not been peer reviewed yet."
 
         APIClient.peerFeedback(submissionId: submissionId, completion: { result, error in
@@ -222,7 +222,9 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
                 
                 self.toolbarTotalTv.stringValue = "Total: \(total)"
             } else if error != nil {
-                Misc.dialogOKCancel(question: error!.localizedDescription, text: "")
+                if(error!._code != -999){ // ! canceled
+                    Misc.dialogOKCancel(question: error!.localizedDescription, text: "")
+                }
             } else {
                 self.noDataLabel.isHidden = false
             }
@@ -248,7 +250,9 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
                 self.splitView.isHidden = false
                 self.noDataLabel.isHidden = true
             } else if error != nil {
-                Misc.dialogOKCancel(question: error!.localizedDescription, text: "")
+                if(error!._code != -999){ // ! canceled
+                    Misc.dialogOKCancel(question: error!.localizedDescription, text: "")
+                }
             } else {
                 self.noDataLabel.isHidden = false
             }
@@ -290,10 +294,10 @@ class TableViewController: NSViewController, NSSearchFieldDelegate, TokenDelegat
 
     @objc func submissionsSwitch(_ sender: NSSegmentedControl) {
         if sender.indexOfSelectedItem == 0 && currentSelectedIndex != 0 {
-            loadSubmissionsCompleted()
+            loadSubmissionsAssigned()
             currentSelectedIndex = 0
         } else if sender.indexOfSelectedItem == 1 && currentSelectedIndex != 1 {
-            loadSubmissionsAssigned()
+            loadSubmissionsCompleted()
             currentSelectedIndex = 1
         }
     }
@@ -443,9 +447,9 @@ extension TableViewController: NSToolbarDelegate {
             segmented.segmentStyle = .rounded
             segmented.segmentCount = 2
 
-            segmented.setLabel("Completed", forSegment: 0)
+            segmented.setLabel("Assigned", forSegment: 0)
             segmented.setSelected(true, forSegment: 0)
-            segmented.setLabel("Assigned", forSegment: 1)
+            segmented.setLabel("Completed", forSegment: 1)
             segmented.action = #selector(submissionsSwitch)
             toolbarItem.view = segmented
 
