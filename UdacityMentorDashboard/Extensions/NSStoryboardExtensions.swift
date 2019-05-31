@@ -26,12 +26,8 @@ extension NSStoryboard {
      let storyboard = NSStoryboard.mainStoryboard
      ```
      */
-    public static var mainStoryboard: NSStoryboard? {
-        let bundle = Bundle.main
-        guard let name = bundle.object(forInfoDictionaryKey: "Main") as? String else {
-            return nil
-        }
-        return NSStoryboard(name:name, bundle: Bundle.main)
+    public static var mainStoryboard: NSStoryboard! {
+        return NSStoryboard(name:"Main", bundle: Bundle.main)
     }
 
     /**

@@ -142,7 +142,6 @@
                         </connections>
                     </window>
                     <connections>
-                        <outlet property="toolbar" destination="l8h-2V-kiD" id="hyA-fJ-eHz"/>
                         <segue destination="AhW-EQ-ynq" kind="relationship" relationship="window.shadowedContentViewController" id="efc-XN-YUg"/>
                     </connections>
                 </windowController>
