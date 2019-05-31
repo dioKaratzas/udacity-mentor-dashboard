@@ -17,16 +17,10 @@
 import Foundation
 import Alamofire
 
-protocol APIConfiguration: URLRequestConvertible {
-    var method: HTTPMethod { get }
-    var path: String { get }
-    var parameters: Parameters? { get }
-}
-
-enum ApiRouter: APIConfiguration {
-    case Me()
-    case SubmissionsCompleted()
-    case SubmissionsAssigned()
+enum ApiRouter: URLRequestConvertible {
+    case Me
+    case SubmissionsCompleted
+    case SubmissionsAssigned
     case StudentFeedback(id: String)
     case PeerFeedback(id: String)
 

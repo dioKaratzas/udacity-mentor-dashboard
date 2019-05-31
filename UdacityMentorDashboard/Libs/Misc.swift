@@ -17,7 +17,7 @@
 import Cocoa
 
 struct Misc {
-    static func dialogOKCancel(question: String, text: String) -> Bool {
+    static func dialogOKCancel(question: String, text: String) {
         let alert = NSAlert()
         alert.messageText = question
 
@@ -27,7 +27,7 @@ struct Misc {
 
         alert.alertStyle = .warning
         alert.addButton(withTitle: "OK")
-        return alert.runModal() == .alertFirstButtonReturn
+//        return alert.runModal() == .alertFirstButtonReturn
     }
 
 }

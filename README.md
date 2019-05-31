@@ -13,13 +13,17 @@ You can download an app build [on releases page](https://github.com/dnKaratzas/u
 
 ### Requirements
 
-- macOS 10.11+
+- macOS 10.12+
 
 ### Build Requirements
-- Xcode 9.0 and above
-- Swift 4.0 and above
+- Xcode 10.0 and above
+- Swift 5.0 and above
 
-Before you can run the project, make sure to install the dependencies using [CocoaPods](https://cocoapods.org/).
+Before you can run the project, make sure to install the dependencies using [Carthage](https://github.com/Carthage/Carthage/releases).
+You can install Carthage dependencies by running:
+```
+carthage update --platform macOS
+````
 
 ## Features
 

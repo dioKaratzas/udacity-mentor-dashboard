@@ -16,10 +16,14 @@
 
 import Cocoa
 
-class WindowController: NSWindowController {
+class AnalyticsViewController: NSViewController {
 
-    override func windowDidLoad() {
-        super.windowDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do view setup here.
     }
-
+    
+    deinit {
+        log.info("\(self.className) deinit called")
+    }
 }

@@ -55,7 +55,7 @@ public class AdaptiveSpaceItem: NSToolbarItem {
     // MARK: - Private methods
     private func minSize() -> NSSize {
         let items = toolbar?.items
-        let index = items?.index(of: self)
+        let index = items?.firstIndex(of: self)
         guard let unwrappedIndex = index, let unwrappedItems = items, let superviewFrame = view?.superview?.frame, superviewFrame.origin.x > 0 else {
             return minSize
         }

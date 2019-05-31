@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import UdacityMentorDashboard
+//@testable import UdacityMentorDashboard
 
 class UdacityMentorDashboardTests: XCTestCase {
 

@@ -22,10 +22,10 @@ class APIClient {
     static func checkAuthorizationAccess(token: String, completion: @escaping (Bool, Error?) -> Void) {
         UdacityApi.Token = token
 
-        Alamofire.request(ApiRouter.Me())
+        AF.request(ApiRouter.Me)
                 .responseJSON { response in
                     switch response.result {
-                    case .success(let value):
+                    case .success( _):
                         DispatchQueue.main.async {
                             if response.response?.statusCode == 401 {
                                 completion(false, nil)
@@ -43,11 +43,11 @@ class APIClient {
     }
 
     static func submissionsCompleted(completion: @escaping ([Submission]?, Error?) -> Void) {
-        request(apiRouter: ApiRouter.SubmissionsCompleted(), completion: completion)
+        request(apiRouter: ApiRouter.SubmissionsCompleted, completion: completion)
     }
 
     static func submissionsAssigned(completion: @escaping ([Submission]?, Error?) -> Void) {
-        request(apiRouter: ApiRouter.SubmissionsAssigned(), completion: completion)
+        request(apiRouter: ApiRouter.SubmissionsAssigned, completion: completion)
     }
 
     static func peerFeedback(submissionId: String, completion: @escaping ([PeerFeedback]?, Error?) -> Void) {
@@ -59,11 +59,11 @@ class APIClient {
     }
     
     static private func cancelAllRequests(){
-        Alamofire.SessionManager.default.session.getTasksWithCompletionHandler { (sessionDataTask, uploadData, downloadData) in
-            sessionDataTask.forEach { $0.cancel() }
-            uploadData.forEach { $0.cancel() }
-            downloadData.forEach { $0.cancel() }
-        }
+//        AF.Session.default.session.getTasksWithCompletionHandler { (sessionDataTask, uploadData, downloadData) in
+//            sessionDataTask.forEach { $0.cancel() }
+//            uploadData.forEach { $0.cancel() }
+//            downloadData.forEach { $0.cancel() }
+//        }
     }
 
 
@@ -73,13 +73,13 @@ class APIClient {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
 
-        Alamofire.request(apiRouter)
-                .responseDecodableObject(queue: DispatchQueue.global(qos: .userInitiated), decoder: decoder) { (response: DataResponse<T>) in
+        AF.request(apiRouter)
+            .responseDecodable(queue: DispatchQueue.global(qos: .userInitiated), decoder: decoder) { (response: DataResponse<T>) in
                     // Print Alamofire Response Json
-                    /*if let data = response.data {
-                     let json = String(data: data, encoding: String.Encoding.utf8)
-                     log.debug("Failure Response: \(json)")
-                     }*/
+//                    if let data = response.data {
+//                     let json = String(data: data, encoding: String.Encoding.utf8)
+//                     log.debug("Failure Response: \(json)")
+//                     }
                     switch response.result {
                     case .success(let value):
                         DispatchQueue.main.async {

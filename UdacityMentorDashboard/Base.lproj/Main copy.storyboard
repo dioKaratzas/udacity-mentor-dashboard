@@ -109,33 +109,20 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-547" y="-146"/>
+            <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="Mentor_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
-                        <rect key="contentRect" x="589" y="389" width="1100" height="700"/>
+                        <rect key="contentRect" x="589" y="389" width="600" height="300"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="1100" height="700"/>
                         <toolbar key="toolbar" implicitIdentifier="9B81E0B1-BD59-44F5-AF84-381AF6CC6F67" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="l8h-2V-kiD">
-                            <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="81FA6D39-7CA5-457B-A70F-1CA849381AAE" label="Custom View" paletteLabel="Custom View" image="Logo" id="1EH-sW-JIi">
-                                    <nil key="toolTip"/>
-                                    <size key="minSize" width="48" height="37"/>
-                                    <size key="maxSize" width="160" height="48"/>
-                                    <imageView key="view" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qoG-on-8g5">
-                                        <rect key="frame" x="14" y="14" width="48" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Logo" id="BWN-Vo-lWz"/>
-                                    </imageView>
-                                </toolbarItem>
-                            </allowedToolbarItems>
-                            <defaultToolbarItems>
-                                <toolbarItem reference="1EH-sW-JIi"/>
-                            </defaultToolbarItems>
+                            <allowedToolbarItems/>
+                            <defaultToolbarItems/>
                         </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -148,7 +135,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-547" y="281"/>
+            <point key="canvasLocation" x="74.5" y="297"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Atb-IR-RoO">
@@ -165,7 +152,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="262"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="HM6-Te-rAs"/>
+                                            <constraint firstAttribute="width" constant="180" id="hkk-Il-kQT"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="jFa-SC-2Lq" kind="embed" id="Rfb-fE-0Wk"/>
@@ -202,12 +189,35 @@
                 </viewController>
                 <customObject id="eO8-YA-sm1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693" y="281"/>
+            <point key="canvasLocation" x="742" y="281"/>
         </scene>
-        <!--Reviews View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="fOa-mv-pbC">
             <objects>
-                <viewController identifier="ReviewsViewController" storyboardIdentifier="ReviewsViewController" id="2cZ-4d-aM3" customClass="ReviewsViewController" customModule="Mentor_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <menu autoenablesItems="NO" id="Mhd-pL-4I0">
+                    <items>
+                        <menuItem title="Submission" id="tmM-TC-cjj">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="onSubmissionClick:" target="2cZ-4d-aM3" id="lew-3Y-aGu"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Repo Url" id="6JV-S0-bMf">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="onRepoUrlClick:" target="2cZ-4d-aM3" id="bQx-6j-gy8"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="DownloadProject" id="vRB-Zm-JbT">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="onDownloadProjectCLick:" target="2cZ-4d-aM3" id="DLS-Cb-Tx3"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
+                <customObject id="Pct-eZ-1GL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Table View Controller" identifier="TableViewController" storyboardIdentifier="TableViewController" id="2cZ-4d-aM3" customClass="TableViewController" customModule="Mentor_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ADo-Bk-0qT">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -215,7 +225,7 @@
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ne5-Z5-pVf">
                                 <rect key="frame" x="0.0" y="0.0" width="800" height="415"/>
                                 <subviews>
-                                    <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="JdB-E5-Wgp">
+                                    <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="JdB-E5-Wgp">
                                         <rect key="frame" x="0.0" y="0.0" width="606" height="415"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <clipView key="contentView" drawsBackground="NO" id="Pwm-Bf-L8z">
@@ -457,16 +467,19 @@
                                                             </prototypeCellViews>
                                                         </tableColumn>
                                                     </tableColumns>
+                                                    <connections>
+                                                        <outlet property="menu" destination="Mhd-pL-4I0" id="lQa-2I-2gR"/>
+                                                    </connections>
                                                 </tableView>
                                             </subviews>
                                             <nil key="backgroundColor"/>
                                         </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="xIo-OY-F6W">
-                                            <rect key="frame" x="-100" y="-100" width="606" height="16"/>
+                                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="xIo-OY-F6W">
+                                            <rect key="frame" x="0.0" y="399" width="606" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Mse-V5-Sdr">
-                                            <rect key="frame" x="-100" y="-100" width="15" height="102"/>
+                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <tableHeaderView key="headerView" id="iJf-Z7-ZlF">
@@ -499,7 +512,7 @@
                                                                     <rect key="frame" x="27" y="150" width="119" height="17"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Student Feedback" id="bU0-Jh-3ri">
                                                                         <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="Green"/>
+                                                                        <color key="textColor" name="Color"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
@@ -538,7 +551,7 @@
                                                                     <rect key="frame" x="39" y="42" width="95" height="17"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Peer Feedback" id="poF-j7-0M5">
                                                                         <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="Green"/>
+                                                                        <color key="textColor" name="Color"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
@@ -646,20 +659,17 @@
                         <outlet property="tableView" destination="NkL-ew-NCp" id="1bs-2x-LMt"/>
                     </connections>
                 </viewController>
-                <customObject id="Pct-eZ-1GL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="479"/>
+            <point key="canvasLocation" x="2089" y="642.5"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="fdv-Wm-1IG">
             <objects>
                 <tabViewController storyboardIdentifier="TabViewController" selectedTabViewItemIndex="0" tabStyle="unspecified" canPropagateSelectedChildViewControllerTitle="NO" id="KlY-J1-AdX" customClass="TabViewController" customModule="Mentor_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem id="hAO-kT-eBI"/>
-                        <tabViewItem id="dKZ-fZ-sa8"/>
-                        <tabViewItem id="eBF-Xb-QF7"/>
+                        <tabViewItem id="EwF-TU-Sxa"/>
+                        <tabViewItem id="Vj9-Gu-iIt"/>
                     </tabViewItems>
-                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="u03-u5-DnK">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -670,27 +680,26 @@
                     </tabView>
                     <connections>
                         <outlet property="tabView" destination="u03-u5-DnK" id="CFg-Pn-CLW"/>
-                        <segue destination="2cZ-4d-aM3" kind="relationship" relationship="tabItems" id="geE-50-diS"/>
-                        <segue destination="2cZ-4d-aM3" kind="relationship" relationship="tabItems" id="vaV-KS-oFO"/>
-                        <segue destination="qzg-xs-Rlf" kind="relationship" relationship="tabItems" id="GaU-Ui-uHe"/>
+                        <segue destination="qzg-xs-Rlf" kind="relationship" relationship="tabItems" id="os7-6n-NyX"/>
+                        <segue destination="2cZ-4d-aM3" kind="relationship" relationship="tabItems" id="D6s-aM-mgm"/>
                     </connections>
                 </tabViewController>
                 <customObject id="8i7-jv-Y0H" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1323" y="281"/>
+            <point key="canvasLocation" x="1338" y="64"/>
         </scene>
-        <!--Analytics View Controller-->
+        <!--Monthly Statements View Controller-->
         <scene sceneID="blh-Oa-gTO">
             <objects>
                 <customObject id="bMY-Oh-UL1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="MonthlyStatementsViewController" id="qzg-xs-Rlf" customClass="AnalyticsViewController" customModule="Mentor_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController identifier="MonthlyStatementsViewController" storyboardIdentifier="MonthlyStatementsViewController" id="qzg-xs-Rlf" customClass="MonthlyStatementsViewController" customModule="Mentor_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="oCA-aI-nm0">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="415"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="377"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2100" y="9"/>
+            <point key="canvasLocation" x="2102" y="20"/>
         </scene>
         <!--Authorization-->
         <scene sceneID="ENx-rj-Oxr">
@@ -763,7 +772,7 @@ Gw
                 </viewController>
                 <customObject id="t9Q-pI-LsC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717" y="780"/>
+            <point key="canvasLocation" x="742" y="764"/>
         </scene>
         <!--Sidebar View Controller-->
         <scene sceneID="Qna-bC-Bwh">
@@ -779,7 +788,7 @@ Gw
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="10" outlineTableColumn="VKF-rK-h1b" id="jrQ-kS-4gh" customClass="OutlineView" customModule="Mentor_Dashboard" customModuleProvider="target">
+                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="14" outlineTableColumn="VKF-rK-h1b" id="jrQ-kS-4gh">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="0.0"/>
@@ -843,11 +852,10 @@ Gw
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Fgr-4U-wUa" secondAttribute="trailing" id="5SC-gK-Abi"/>
-                            <constraint firstAttribute="bottom" secondItem="Fgr-4U-wUa" secondAttribute="bottom" id="KdA-3E-O7W"/>
-                            <constraint firstItem="Fgr-4U-wUa" firstAttribute="leading" secondItem="LdZ-No-ly1" secondAttribute="leading" id="YWU-gD-pOH"/>
+                            <constraint firstAttribute="trailing" secondItem="Fgr-4U-wUa" secondAttribute="trailing" id="DYZ-Oj-jxS"/>
+                            <constraint firstItem="Fgr-4U-wUa" firstAttribute="top" secondItem="LdZ-No-ly1" secondAttribute="top" id="hdO-9V-gh9"/>
                             <constraint firstAttribute="bottom" secondItem="Fgr-4U-wUa" secondAttribute="bottom" id="jgo-Am-kaG"/>
-                            <constraint firstItem="Fgr-4U-wUa" firstAttribute="top" secondItem="LdZ-No-ly1" secondAttribute="top" id="lfF-Ro-UV8"/>
+                            <constraint firstItem="Fgr-4U-wUa" firstAttribute="leading" secondItem="LdZ-No-ly1" secondAttribute="leading" id="uIi-DJ-ZH1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -856,16 +864,12 @@ Gw
                 </viewController>
                 <customObject id="MOm-HV-IcP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="774"/>
+            <point key="canvasLocation" x="1259" y="770"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="160" height="37"/>
-        <namedColor name="Green">
-            <color red="0.28235294117647058" green="0.69411764705882351" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Color">
+            <color red="1" green="0.40784313725490196" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="geE-50-diS"/>
-    </inferredMetricsTieBreakers>
 </document>
