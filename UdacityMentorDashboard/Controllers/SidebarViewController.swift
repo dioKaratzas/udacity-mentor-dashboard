@@ -24,8 +24,8 @@ class SidebarViewController: NSViewController {
     var menuItems = [MenuItem](
         arrayLiteral:
         MenuItem(title: "Reviews", menu: nil,
-                 children: MenuItemChildren(title: "Assigned", menu: .ReviewsAssigned), MenuItemChildren(title: "Completed", menu: .ReviewsCompleted))/*,
-        MenuItem(title: "Analytics", menu: .Analytics)*/
+                 children: MenuItemChildren(title: "Assigned", menu: .ReviewsAssigned), MenuItemChildren(title: "Completed", menu: .ReviewsCompleted)),
+        MenuItem(title: "Earnings", menu: .Analytics)
     
     )
     

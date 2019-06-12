@@ -30,19 +30,18 @@ struct StudentFeedback: Codable {
     let updatedAt: String?
     let userId: Int?
 
-
     enum CodingKeys: String, CodingKey {
         case body = "body"
-        case createdAt = "created_at"
-        case graderId = "grader_id"
+        case createdAt = "createdat"
+        case graderId = "graderid"
         case id = "id"
         case project
         case rating = "rating"
-        case readAt = "read_at"
-        case rubricId = "rubric_id"
-        case submissionId = "submission_id"
-        case updatedAt = "updated_at"
-        case userId = "user_id"
+        case readAt = "readat"
+        case rubricId = "rubricid"
+        case submissionId = "submissionid"
+        case updatedAt = "updatedat"
+        case userId = "userid"
     }
 
 }

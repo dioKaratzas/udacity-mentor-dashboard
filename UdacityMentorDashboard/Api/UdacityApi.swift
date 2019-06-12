@@ -36,6 +36,9 @@ class UdacityApi {
             static let SubmissionsRequests: String = Me + "/submission_requests"
             static let PeerFeedback: String = Me + "/votes?submission_ids[]=%@"
             static let StudentFeedback: String = Me + "/student_feedbacks?submission_ids[]=%@"
+            static let TotalEarnings: String = Me + "/earnings"
+            static let Earnings: String = Me + "/earnings?start_date=%@&end_date=%@"
+            static let Statements: String = Me + "/reviewer_statements?start_date=2011-01-01T00:00:00.000Z"
         }
 
 

@@ -28,7 +28,7 @@ class ReviewsViewController: NSViewController  {
     @IBOutlet weak var splitView: NSSplitView!
     @IBOutlet weak var noDataLabel: NSTextField!
     
-    @objc dynamic var submissions: [Submission]?
+    var submissions: [Submission]?
     private var backSubmissions: Array<Submission>?
     
     

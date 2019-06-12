@@ -58,6 +58,18 @@ class APIClient {
         request(apiRouter: ApiRouter.StudentFeedback(id: submissionId), completion: completion)
     }
     
+    static func totalEarnings(completion: @escaping (Earnings?, Error?) -> Void) {
+        request(apiRouter: ApiRouter.TotalEarnings, completion: completion)
+    }
+    
+    static func earnings(year: Int, month: Int, monthDays: Int, completion: @escaping (Earnings?, Error?) -> Void) {
+        request(apiRouter: ApiRouter.Earnings(stardDate: "%22\(year)-\(month)-01T00:00:00.000Z%22", endDate: "%22\(year)-\(month)-\(monthDays)T23:59:59.000Z%22"), completion: completion)
+    }
+    
+    static func statements(completion: @escaping ([Statement]?, Error?) -> Void) {
+        request(apiRouter: ApiRouter.Statements, completion: completion)
+    }
+    
     static private func cancelAllRequests(){
 //        AF.Session.default.session.getTasksWithCompletionHandler { (sessionDataTask, uploadData, downloadData) in
 //            sessionDataTask.forEach { $0.cancel() }
@@ -75,7 +87,7 @@ class APIClient {
 
         AF.request(apiRouter)
             .responseDecodable(queue: DispatchQueue.global(qos: .userInitiated), decoder: decoder) { (response: DataResponse<T>) in
-                    // Print Alamofire Response Json
+//                     Print Alamofire Response Json
 //                    if let data = response.data {
 //                     let json = String(data: data, encoding: String.Encoding.utf8)
 //                     log.debug("Failure Response: \(json)")

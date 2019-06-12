@@ -678,18 +678,80 @@
             </objects>
             <point key="canvasLocation" x="1323" y="281"/>
         </scene>
-        <!--Analytics View Controller-->
+        <!--Earnings View Controller-->
         <scene sceneID="blh-Oa-gTO">
             <objects>
                 <customObject id="bMY-Oh-UL1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="MonthlyStatementsViewController" id="qzg-xs-Rlf" customClass="AnalyticsViewController" customModule="Mentor_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MonthlyStatementsViewController" id="qzg-xs-Rlf" customClass="EarningsViewController" customModule="Mentor_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="oCA-aI-nm0">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="252" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kUF-kH-yQa">
+                                <rect key="frame" x="18" y="358" width="4" height="37"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" id="ubx-Sy-YBg">
+                                    <font key="font" size="22" name="AvenirNext-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-dX-wvQ">
+                                <rect key="frame" x="18" y="326" width="145" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="ZBZ-QT-ybh"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="zPi-cJ-dNN" id="qSX-77-sxa">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="D53-qP-Se6">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="zPi-cJ-dNN"/>
+                                            <menuItem title="Item 2" id="gVx-WH-RV1"/>
+                                            <menuItem title="Item 3" id="dxA-FW-yuL"/>
+                                        </items>
+                                    </menu>
+                                    <connections>
+                                        <action selector="onSelectYear:" target="qzg-xs-Rlf" id="Nwk-l1-035"/>
+                                    </connections>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="RAG-iW-7tZ" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="20" width="760" height="301"/>
+                            </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="xo6-0E-5sX">
+                                <rect key="frame" x="174" y="328" width="4" height="24"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" id="9ge-ai-Dm4">
+                                    <font key="font" size="14" name="AvenirNext-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="RAG-iW-7tZ" secondAttribute="bottom" constant="20" id="2Vd-KF-Nd4"/>
+                            <constraint firstItem="RAG-iW-7tZ" firstAttribute="leading" secondItem="kUF-kH-yQa" secondAttribute="leading" id="BVh-qH-a2q"/>
+                            <constraint firstItem="RAG-iW-7tZ" firstAttribute="top" secondItem="QRY-dX-wvQ" secondAttribute="bottom" constant="8" id="Hcu-ph-rkf"/>
+                            <constraint firstAttribute="trailing" secondItem="RAG-iW-7tZ" secondAttribute="trailing" constant="20" id="QGJ-3B-6RQ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kUF-kH-yQa" secondAttribute="trailing" constant="20" symbolic="YES" id="R51-OJ-49F"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QRY-dX-wvQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Trp-d5-AqC"/>
+                            <constraint firstItem="QRY-dX-wvQ" firstAttribute="top" secondItem="kUF-kH-yQa" secondAttribute="bottom" constant="8" id="Tss-12-kls"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xo6-0E-5sX" secondAttribute="trailing" constant="20" symbolic="YES" id="Ymn-6T-NWp"/>
+                            <constraint firstItem="kUF-kH-yQa" firstAttribute="leading" secondItem="oCA-aI-nm0" secondAttribute="leading" constant="20" id="aJq-6p-tmd"/>
+                            <constraint firstItem="QRY-dX-wvQ" firstAttribute="leading" secondItem="kUF-kH-yQa" secondAttribute="leading" id="j4G-zQ-mhz"/>
+                            <constraint firstItem="xo6-0E-5sX" firstAttribute="centerY" secondItem="QRY-dX-wvQ" secondAttribute="centerY" id="lHW-ru-z60"/>
+                            <constraint firstItem="xo6-0E-5sX" firstAttribute="leading" secondItem="QRY-dX-wvQ" secondAttribute="trailing" constant="16" id="niA-eV-FFQ"/>
+                            <constraint firstItem="kUF-kH-yQa" firstAttribute="top" secondItem="oCA-aI-nm0" secondAttribute="top" constant="20" id="vgj-Qt-5qd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barChartCiew" destination="RAG-iW-7tZ" id="WsI-YB-tT5"/>
+                        <outlet property="totalEarningsLabel" destination="kUF-kH-yQa" id="gX7-IQ-B6g"/>
+                        <outlet property="yearEarningsLabel" destination="xo6-0E-5sX" id="Fl6-tq-uCz"/>
+                        <outlet property="yearPopUp" destination="QRY-dX-wvQ" id="iLn-qW-vS1"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2100" y="9"/>
+            <point key="canvasLocation" x="2100" y="8.5"/>
         </scene>
         <!--Authorization-->
         <scene sceneID="ENx-rj-Oxr">

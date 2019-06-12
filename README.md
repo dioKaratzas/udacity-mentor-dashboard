@@ -28,13 +28,15 @@ carthage update --platform macOS
 ## Features
 
 - View completed and assigned reviews.
-- Searching.
-- Sorting.
-- Double click to open submission on browser.
-- Right click menu contains:
-	- Open submission on browser.
-	- Navigate to Github repository if exists.
-	- Download project files.
+    - Searching.
+    - Sorting.
+    - Double click to open submission on browser.
+    - Right click menu contains:
+        - Open submission on browser.
+        - Navigate to Github repository if exists.
+        - Download project files.
+- View earnings for every year
+    - Click on chart bar to download the statement of the month
 
 ## Screenshot
 
@@ -45,6 +47,7 @@ carthage update --platform macOS
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver)
 - [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess)
+- [Charts](https://github.com/danielgindi/Charts)
 
 
 

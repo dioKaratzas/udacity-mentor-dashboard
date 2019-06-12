@@ -47,4 +47,15 @@ extension String {
         return result
     }
     
+    var toDouble: Double {
+        return Double(self) ?? 0.0
+    }
+}
+
+extension Double {
+    
+    func toInt() -> Int {
+        return Int(self)
+    }
+    
 }

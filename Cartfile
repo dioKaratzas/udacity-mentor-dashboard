@@ -1,3 +1,4 @@
 github "SwiftyBeaver/SwiftyBeaver"
 github "Alamofire/Alamofire" "5.0.0-beta.5"
 github "kishikawakatsumi/KeychainAccess"
+github "danielgindi/Charts" ~> 3.3.0

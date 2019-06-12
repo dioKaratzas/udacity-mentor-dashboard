@@ -14,16 +14,24 @@
  * limitations under the License.
  */
 
-import Cocoa
+import Foundation
 
-class AnalyticsViewController: NSViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+final class Earnings: Codable {
+    private let _earnings: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case _earnings = "earnings"
     }
     
-    deinit {
-        log.info("\(self.className) deinit called")
+    // MARK: Getters
+    var earnings: String {
+        if let value = _earnings {
+            return String(value)
+        } else {
+            return ""
+        }
     }
+
+
+    
 }

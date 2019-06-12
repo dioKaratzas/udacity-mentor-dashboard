@@ -23,10 +23,13 @@ enum ApiRouter: URLRequestConvertible {
     case SubmissionsAssigned
     case StudentFeedback(id: String)
     case PeerFeedback(id: String)
+    case TotalEarnings
+    case Earnings(stardDate: String, endDate: String)
+    case Statements
 
     var method: HTTPMethod {
         switch self {
-        case .Me, .SubmissionsCompleted, .SubmissionsAssigned, .PeerFeedback, .StudentFeedback:
+        case .Me, .SubmissionsCompleted, .SubmissionsAssigned, .PeerFeedback, .StudentFeedback, .TotalEarnings, .Earnings, .Statements:
             return .get
         }
     }
@@ -43,6 +46,12 @@ enum ApiRouter: URLRequestConvertible {
             return String(format: UdacityApi.Routes.Me.StudentFeedback, id)
         case .PeerFeedback(let id):
             return String(format: UdacityApi.Routes.Me.PeerFeedback, id)
+        case .TotalEarnings:
+            return UdacityApi.Routes.Me.TotalEarnings
+        case .Earnings(let stardDate, let endDate):
+            return String(format: UdacityApi.Routes.Me.Earnings, stardDate, endDate)
+        case .Statements:
+            return String(format: UdacityApi.Routes.Me.Statements)
         }
     }
 

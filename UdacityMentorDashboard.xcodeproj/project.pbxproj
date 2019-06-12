@@ -10,13 +10,17 @@
 		29FCC46CFDF62DE94AC7EDA0 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FCC574B1F0F77150A51121 /* Project.swift */; };
 		C31067FA226731120022DEC5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31067F8226731120022DEC5 /* MainViewController.swift */; };
 		C31421BA20E2A54F00C622FF /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31421B920E2A54F00C622FF /* DocumentView.swift */; };
+		C318A21A22B1017C00B6DAB6 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C318A21922B1017C00B6DAB6 /* Charts.framework */; };
 		C322057922A124CE0048802D /* OutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322057822A124CE0048802D /* OutlineView.swift */; };
 		C34AE67020F3E4C700F9167E /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34AE66F20F3E4C700F9167E /* TokenViewController.swift */; };
+		C35C09F422B0F4E400E1209A /* Earnings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C09F322B0F4E400E1209A /* Earnings.swift */; };
 		C366655C20D717D600D7109E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C366655B20D717D600D7109E /* .gitignore */; };
 		C37E430420D409DF00537CD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E430320D409DF00537CD9 /* AppDelegate.swift */; };
 		C37E430820D409DF00537CD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37E430720D409DF00537CD9 /* Assets.xcassets */; };
 		C37E431720D409DF00537CD9 /* UdacityMentorDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E431620D409DF00537CD9 /* UdacityMentorDashboardTests.swift */; };
 		C37E432220D409DF00537CD9 /* UdacityMentorDashboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E432120D409DF00537CD9 /* UdacityMentorDashboardUITests.swift */; };
+		C38C9FAA22B1359C001A8234 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38C9FA922B1359C001A8234 /* Statement.swift */; };
+		C390383722B0EF9D0022EFDD /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = C390383622B0EF9D0022EFDD /* Cartfile */; };
 		C392846820D6B3E3004272DC /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392846720D6B3E3004272DC /* ApiRouter.swift */; };
 		C392846B20D6B6A8004272DC /* Submission.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392846A20D6B6A8004272DC /* Submission.swift */; };
 		C392846D20D6BC62004272DC /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392846C20D6BC62004272DC /* ApiClient.swift */; };
@@ -29,7 +33,7 @@
 		C3CEF1E122A11AAC0079B1D3 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CEF1DE22A11AAC0079B1D3 /* KeychainAccess.framework */; };
 		C3CEF1E622A11AC70079B1D3 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CEF1E222A11AC70079B1D3 /* ReviewsViewController.swift */; };
 		C3CEF1E722A11AC70079B1D3 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CEF1E322A11AC70079B1D3 /* SidebarViewController.swift */; };
-		C3CEF1E822A11AC70079B1D3 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CEF1E422A11AC70079B1D3 /* AnalyticsViewController.swift */; };
+		C3CEF1E822A11AC70079B1D3 /* EarningsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CEF1E422A11AC70079B1D3 /* EarningsViewController.swift */; };
 		C3CEF1E922A11AC70079B1D3 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CEF1E522A11AC70079B1D3 /* TabViewController.swift */; };
 		C3CEF1ED22A11D140079B1D3 /* NSStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CEF1EC22A11D140079B1D3 /* NSStoryboardExtensions.swift */; };
 		C3D083BD20D674ED00D9D901 /* UdacityApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D083BC20D674ED00D9D901 /* UdacityApi.swift */; };
@@ -60,8 +64,10 @@
 		29FCC574B1F0F77150A51121 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		C31067F8226731120022DEC5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C31421B920E2A54F00C622FF /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		C318A21922B1017C00B6DAB6 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/Mac/Charts.framework; sourceTree = "<group>"; };
 		C322057822A124CE0048802D /* OutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineView.swift; sourceTree = "<group>"; };
 		C34AE66F20F3E4C700F9167E /* TokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
+		C35C09F322B0F4E400E1209A /* Earnings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earnings.swift; sourceTree = "<group>"; };
 		C366655B20D717D600D7109E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C37E430020D409DF00537CD9 /* Mentor Dashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mentor Dashboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37E430320D409DF00537CD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,8 @@
 		C37E431D20D409DF00537CD9 /* UdacityMentorDashboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UdacityMentorDashboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37E432120D409DF00537CD9 /* UdacityMentorDashboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityMentorDashboardUITests.swift; sourceTree = "<group>"; };
 		C37E432320D409DF00537CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C38C9FA922B1359C001A8234 /* Statement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		C390383622B0EF9D0022EFDD /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		C392846720D6B3E3004272DC /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		C392846A20D6B6A8004272DC /* Submission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submission.swift; sourceTree = "<group>"; };
 		C392846C20D6BC62004272DC /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -86,7 +94,7 @@
 		C3CEF1DE22A11AAC0079B1D3 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/Mac/KeychainAccess.framework; sourceTree = "<group>"; };
 		C3CEF1E222A11AC70079B1D3 /* ReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		C3CEF1E322A11AC70079B1D3 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
-		C3CEF1E422A11AC70079B1D3 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		C3CEF1E422A11AC70079B1D3 /* EarningsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningsViewController.swift; sourceTree = "<group>"; };
 		C3CEF1E522A11AC70079B1D3 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		C3CEF1EC22A11D140079B1D3 /* NSStoryboardExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSStoryboardExtensions.swift; sourceTree = "<group>"; };
 		C3D083BC20D674ED00D9D901 /* UdacityApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityApi.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C318A21A22B1017C00B6DAB6 /* Charts.framework in Frameworks */,
 				C3CEF1DF22A11AAC0079B1D3 /* Alamofire.framework in Frameworks */,
 				C3CEF1E022A11AAC0079B1D3 /* SwiftyBeaver.framework in Frameworks */,
 				C3CEF1E122A11AAC0079B1D3 /* KeychainAccess.framework in Frameworks */,
@@ -127,6 +136,7 @@
 		C37E42F720D409DE00537CD9 = {
 			isa = PBXGroup;
 			children = (
+				C390383622B0EF9D0022EFDD /* Cartfile */,
 				C366655B20D717D600D7109E /* .gitignore */,
 				C37E430220D409DF00537CD9 /* UdacityMentorDashboard */,
 				C37E431520D409DF00537CD9 /* UdacityMentorDashboardTests */,
@@ -196,7 +206,7 @@
 		C37E433220D414EC00537CD9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C3CEF1E422A11AC70079B1D3 /* AnalyticsViewController.swift */,
+				C3CEF1E422A11AC70079B1D3 /* EarningsViewController.swift */,
 				C3CEF1E222A11AC70079B1D3 /* ReviewsViewController.swift */,
 				C3CEF1E322A11AC70079B1D3 /* SidebarViewController.swift */,
 				C3CEF1E522A11AC70079B1D3 /* TabViewController.swift */,
@@ -213,6 +223,8 @@
 				29FCC574B1F0F77150A51121 /* Project.swift */,
 				C3B3AB8F20DD38CB00121561 /* PeerFeedback.swift */,
 				C3B3AB9120DD397B00121561 /* StudentFeedback.swift */,
+				C35C09F322B0F4E400E1209A /* Earnings.swift */,
+				C38C9FA922B1359C001A8234 /* Statement.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +232,7 @@
 		C3CEF1DB22A11AAC0079B1D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C318A21922B1017C00B6DAB6 /* Charts.framework */,
 				C3CEF1DC22A11AAC0079B1D3 /* Alamofire.framework */,
 				C3CEF1DE22A11AAC0079B1D3 /* KeychainAccess.framework */,
 				C3CEF1DD22A11AAC0079B1D3 /* SwiftyBeaver.framework */,
@@ -370,6 +383,7 @@
 			files = (
 				C3EF0E0A22676A24008171DF /* Main.storyboard in Resources */,
 				C37E430820D409DF00537CD9 /* Assets.xcassets in Resources */,
+				C390383722B0EF9D0022EFDD /* Cartfile in Resources */,
 				C366655C20D717D600D7109E /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +416,7 @@
 				"$(SRCROOT)/Carthage/Build/Mac/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Charts.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -421,7 +436,7 @@
 				C3A9AB1020E65319001CFB53 /* AdaptiveSpaceItem.swift in Sources */,
 				C31067FA226731120022DEC5 /* MainViewController.swift in Sources */,
 				C3CEF1ED22A11D140079B1D3 /* NSStoryboardExtensions.swift in Sources */,
-				C3CEF1E822A11AC70079B1D3 /* AnalyticsViewController.swift in Sources */,
+				C3CEF1E822A11AC70079B1D3 /* EarningsViewController.swift in Sources */,
 				C3FAD0F820DA874000F65410 /* Extensions.swift in Sources */,
 				C392846820D6B3E3004272DC /* ApiRouter.swift in Sources */,
 				C3B3AB9220DD397B00121561 /* StudentFeedback.swift in Sources */,
@@ -433,9 +448,11 @@
 				C34AE67020F3E4C700F9167E /* TokenViewController.swift in Sources */,
 				C392846B20D6B6A8004272DC /* Submission.swift in Sources */,
 				C322057922A124CE0048802D /* OutlineView.swift in Sources */,
+				C35C09F422B0F4E400E1209A /* Earnings.swift in Sources */,
 				C3EFFC3F20F3EFBC00A91F22 /* Misc.swift in Sources */,
 				C37E430420D409DF00537CD9 /* AppDelegate.swift in Sources */,
 				C3D083BD20D674ED00D9D901 /* UdacityApi.swift in Sources */,
+				C38C9FAA22B1359C001A8234 /* Statement.swift in Sources */,
 				C3CEF1E722A11AC70079B1D3 /* SidebarViewController.swift in Sources */,
 				29FCC46CFDF62DE94AC7EDA0 /* Project.swift in Sources */,
 				C3B3AB9020DD38CB00121561 /* PeerFeedback.swift in Sources */,
