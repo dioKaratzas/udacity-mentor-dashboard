@@ -477,11 +477,11 @@
                                         <rect key="frame" x="607" y="0.0" width="193" height="415"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <clipView key="contentView" drawsBackground="NO" id="W7p-zL-cJ5">
-                                            <rect key="frame" x="0.0" y="0.0" width="193" height="415"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="178" height="400"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <view translatesAutoresizingMaskIntoConstraints="NO" id="tV3-Bn-0dW" customClass="DocumentView" customModule="Mentor_Dashboard" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="198" width="193" height="217"/>
+                                                    <rect key="frame" x="0.0" y="183" width="193" height="217"/>
                                                     <subviews>
                                                         <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJG-3w-1n1">
                                                             <rect key="frame" x="10" y="10" width="173" height="197"/>
@@ -596,11 +596,11 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="Fy7-gW-sz8"/>
                                         </constraints>
                                         <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="nlK-No-G9k">
-                                            <rect key="frame" x="0.0" y="399" width="193" height="16"/>
+                                            <rect key="frame" x="0.0" y="400" width="178" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="e6G-fo-7OF">
-                                            <rect key="frame" x="177" y="0.0" width="16" height="415"/>
+                                            <rect key="frame" x="178" y="0.0" width="15" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
@@ -801,6 +801,15 @@ Gw
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-ou-S7g">
+                                <rect key="frame" x="191" y="141" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="6F8-NL-xv7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>

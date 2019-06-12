@@ -27,7 +27,7 @@ struct Misc {
 
         alert.alertStyle = .warning
         alert.addButton(withTitle: "OK")
-//        return alert.runModal() == .alertFirstButtonReturn
+        alert.runModal()
     }
 
 }

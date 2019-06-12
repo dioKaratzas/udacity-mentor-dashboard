@@ -19,10 +19,10 @@ import Cocoa
 class TabViewController: NSTabViewController {
     var reviewsViewController: ReviewsViewController?
     var test: Bool = false
+    var tokenValid: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        (self.tabViewItems[0].viewController as! ReviewsViewController).loadSubmissionsAssigned(force: true)
     }
     
     public func switchTab(tab: Menu){
@@ -37,5 +37,5 @@ class TabViewController: NSTabViewController {
             self.selectedTabViewItemIndex = 2
         }
     }
-    
+
 }

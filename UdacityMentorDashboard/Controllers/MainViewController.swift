@@ -9,14 +9,14 @@
 import Cocoa
 import KeychainAccess
 
-class MainViewController: NSViewController, NSSplitViewDelegate, SidebarDelegate  {
+class MainViewController: NSViewController, NSSplitViewDelegate, SidebarDelegate, TokenDelegate  {
     
     @IBOutlet weak var splitView: NSSplitView!
+    private var sidebar: SidebarViewController?
     private var tabViewController: TabViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
         
         checkToken()
     }
@@ -30,10 +30,21 @@ class MainViewController: NSViewController, NSSplitViewDelegate, SidebarDelegate
                 self.performSegue(withIdentifier: "showTokenController", sender: self)
             } else {
                 UdacityApi.Token = token!
-                NotificationCenter.default.post(name: NSNotification.Name("tokenIsValid"), object: nil)
+                
+                APIClient.checkAuthorizationAccess(token: token!, completion: { result, error in
+                    if result {
+//                        NotificationCenter.default.post(name: NSNotification.Name("tokenIsValid"), object: nil)
+                        self.onTokenValid()
+                    } else if error != nil {
+                        Misc.dialogOKCancel(question: error!.localizedDescription, text: "")
+                    } else if !result, error == nil {
+                        Misc.dialogOKCancel(question: "Invalid Token", text: "Authorization failed. Ensure that your token is valid.")
+                        self.performSegue(withIdentifier: "showTokenController", sender: self)
+                    }
+                })
             }
         } catch let error {
-            print("error: \(error)")
+            log.error("error: \(error)")
         }
     }
     
@@ -47,9 +58,12 @@ class MainViewController: NSViewController, NSSplitViewDelegate, SidebarDelegate
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if let vc = segue.destinationController as? SidebarViewController {
+            sidebar = vc
             vc.delegate = self
         } else if let vc = segue.destinationController as? TabViewController {
             tabViewController = vc
+        } else if let vc = segue.destinationController as? TokenViewController{
+            vc.delegate = self
         }
     }
     
@@ -57,29 +71,9 @@ class MainViewController: NSViewController, NSSplitViewDelegate, SidebarDelegate
         tabViewController?.switchTab(tab: menu)
     }
     
+    func onTokenValid() {
+        tabViewController?.switchTab(tab: sidebar!.selectedMenu)
+    }
     
-    
-    //    @IBAction func switchViews(sender: NSButton) {
-    //
-    //        for sView in self.containerView.subviews {
-    //            sView.removeFromSuperview()
-    //        }
-    //
-    //        if vc1Active == true {
-    //
-    //            vc1Active = false
-    //            let vc2 : TableViewController! = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "SubmissionsTableViewController") as? TableViewController
-    //            vc2.view.frame = self.containerView.bounds
-    //            self.containerView.addSubview(vc2.view)
-    //
-    //        } else {
-    //
-    //            vc1Active = true
-    //            let vc1 : MonthlyStatementsViewController! = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "MonthlyStatementsViewController") as? MonthlyStatementsViewController
-    //            vc1.view.frame = self.containerView.bounds
-    //            self.containerView.addSubview(vc1.view)
-    //        }
-    //
-    //    }
 }
 

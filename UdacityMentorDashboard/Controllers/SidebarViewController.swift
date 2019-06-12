@@ -20,6 +20,7 @@ class SidebarViewController: NSViewController {
     
     @IBOutlet weak var sidebar: OutlineView!
     public var delegate: SidebarDelegate?
+    private(set) var selectedMenu: Menu = .ReviewsAssigned
     
     var menuItems = [MenuItem](
         arrayLiteral:
@@ -125,10 +126,12 @@ extension SidebarViewController: NSOutlineViewDataSource {
                 if let item = outlineView.item(atRow: i) as? MenuItem {
                     if item.menu != nil {
                         delegate?.sideBar(didSelect: item.menu!)
+                        selectedMenu = item.menu!
                     }
                 } else if let item = outlineView.item(atRow: i) as? MenuItemChildren {
                     if item.menu != nil {
                         delegate?.sideBar(didSelect: item.menu!)
+                        selectedMenu = item.menu!
                     }
                 }
                 
